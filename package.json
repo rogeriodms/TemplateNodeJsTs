@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsnd --inspect --transpile-only --poll --watch --clear --ignore-watch node_modules src/server.ts",
-    "test": "jest"
+    "test": "jest",
+    "test:staged": "jest"
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
