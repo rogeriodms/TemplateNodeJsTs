@@ -1,6 +1,11 @@
 import app from './app';
+import { SERVER } from './config';
+import 'newrelic';
+import { connectToDatabase } from './Database/Connections';
 
-const port = 3001;
+const port = SERVER.PORT;
+
+(async () => await connectToDatabase())();
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
